@@ -1,13 +1,14 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Navbar = () => {
   return (
-    <div className="w-full h-16 bg-gray-900 flex items-center justify-between px-4 shadow">
-      <h1 className="text-white text-2xl font-bold">FlashFlow</h1>
+    <div className="w-full h-16 flex items-center justify-between px-4 text-[#7472f2] ">
+      <h1 className=" text-2xl font-bold">FlashFlow</h1>
       <ul className="flex space-x-6">
-        <li className="text-white hover:text-gray-400 cursor-pointer">Home</li>
-        <li className="text-white hover:text-gray-400 cursor-pointer">About</li>
-        <li className="text-white hover:text-gray-400 cursor-pointer">Contact</li>
+        <Link href="/Home" className=" hover:text-gray-400 cursor-pointer">Home</Link>
+        <Link href="/about" className=" hover:text-gray-400 cursor-pointer">About</Link>
+        <Link href="/contact" className=" hover:text-gray-400 cursor-pointer">Contact</Link>
       </ul>
     </div>
   );

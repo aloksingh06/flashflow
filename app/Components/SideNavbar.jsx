@@ -1,11 +1,12 @@
 "use client";
 // This component is a sidebar navigation menu that can be toggled open and closed.
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Menu, Home, Settings, User } from 'lucide-react';
+import { context } from '../context/Context';
 
 const SideNavbar = () => {
-  const [isOpen, setIsOpen] = useState(true);
-
+  
+    const { isOpen, setIsOpen} = useContext(context)
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
@@ -18,7 +19,7 @@ const SideNavbar = () => {
 
   return (
     <div
-      className={`h-screen bg-gray-800 text-white transition-all duration-300 
+      className={`h-[70vh] rounded-r-4xl m-auto bg-[#7472f2] text-white transition-all duration-300 
       ${isOpen ? 'w-64' : 'w-16'} flex flex-col`}
     >
       <div className="p-4 flex items-center justify-between border-b border-gray-700">
